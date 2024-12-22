@@ -1,0 +1,377 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: RedHat;
+  src: url(../public/assets/fonts/static/RedHatText-Regular.ttf);
+}
+
+@font-face {
+  font-family: RedHat-Semi;
+  src: url(../public/assets/fonts/static/RedHatText-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: RedHat-bold;
+  src: url(../public/assets/fonts/static/RedHatText-Bold.ttf);
+}
+
+body {
+  font-family: redhat;
+  background-color: hsl(13, 31%, 94%);
+}
+
+.app {
+  display: flex;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.header {
+  display: block;
+  color: hsl(14, 65%, 9%);
+  font-family: redhat-bold;
+  margin-bottom: 1rem;
+}
+
+.dessert {
+  width: 70%;
+}
+
+.desserts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.displayImage {
+  height: 250px;
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+}
+
+.displayImage button {
+  border: 1px solid hsl(12, 20%, 44%);
+  display: flex;
+  gap: 0.5rem;
+  font-family: RedHat-Semi;
+  font-size: 16px;
+  color: hsl(12, 20%, 44%);
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  position: absolute;
+  bottom: -1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.displayImage button:hover {
+  color: hsl(14, 86%, 42%);
+  border: 1px solid hsl(14, 86%, 42%);
+}
+
+.displayImage img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.dish {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.details {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.details .dishName {
+  font-size: 16px;
+  font-family: redhat-bold;
+  color: hsl(14, 65%, 9%);
+}
+
+.details .category {
+  font-family: redhat-semi;
+  color: hsl(14, 25%, 72%);
+}
+
+.details .price {
+  color: hsl(14, 86%, 42%);
+  font-family: redhat-bold;
+}
+
+.cart {
+  border-radius: 10px;
+  background-color: hsl(20, 50%, 98%);
+  height: fit-content;
+  width: 30%;
+  padding: 1rem;
+}
+
+.cart-header {
+  color: hsl(14, 86%, 42%);
+  font-family: redhat-bold;
+}
+
+.emptyCart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.emptyCart span {
+  color: hsl(12, 20%, 44%);
+  font-family: redhat-semi;
+}
+
+.selected {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(13, 31%, 94%);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.dishName {
+  color: hsl(14, 65%, 9%);
+  font-family: redhat-bold;
+  margin-bottom: 0.5rem;
+}
+
+.amount {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.quantity {
+  color: hsl(14, 86%, 42%);
+  font-family: redhat-semi;
+}
+
+.eachPrice {
+  color: hsl(14, 25%, 72%);
+}
+
+.totalEachPrice {
+  color: hsl(14, 25%, 72%);
+  font-family: redhat-semi;
+}
+
+.selected button {
+  background-color: transparent;
+  border: 1px solid hsl(14, 25%, 72%);
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.SelectedCart {
+  display: flex;
+  flex-direction: column;
+}
+
+.totalSelected {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.totalPrice {
+  font-family: redhat-bold;
+  font-size: 1.25rem;
+}
+
+.carbon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: hsl(13, 31%, 94%);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.carbon p {
+  font-size: 0.9rem;
+}
+
+.carbon .bold {
+  font-family: redhat-bold;
+}
+
+.confirm {
+  border: none;
+  padding: 1rem;
+  border-radius: 4rem;
+  background-color: hsl(14, 86%, 42%);
+  color: hsl(13, 31%, 94%);
+  font-family: redhat-semi;
+  cursor: pointer;
+}
+
+.displayImage.active {
+  border: 2px solid hsl(14, 86%, 42%);
+}
+
+.displayImage.active button {
+  background-color: hsl(14, 86%, 42%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  cursor: default;
+}
+
+.displayImage.active button span {
+  border: 2px solid hsl(13, 31%, 94%);
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
+.displayImage.active button .count {
+  border: none;
+  color: hsl(13, 31%, 94%);
+}
+
+.displayImage.active button span:hover {
+  background-color: hsl(13, 31%, 94%);
+}
+
+.displayImage.active button .count:hover {
+  background-color: transparent;
+  cursor: default;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+body {
+  position: relative;
+}
+
+.confirmation {
+  background-color: hsl(13, 31%, 94%);
+  padding: 1rem;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(20, 50%, 98%);
+  min-width: 450px;
+}
+
+.confirmationPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.summaryDishes {
+  background-color: hsl(13, 31%, 94%);
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.summaryDish {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.summaryDish .summaryDetail {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.summaryDish .summaryDetail img {
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+}
+
+.summaryDish .summaryDetail .summaryText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.confirmation button {
+  border: none;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 4rem;
+  background-color: hsl(14, 86%, 42%);
+  color: hsl(13, 31%, 94%);
+  font-family: redhat-semi;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 375px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .dessert {
+    width: 100%;
+  }
+
+  .desserts {
+    grid-template-columns: 1fr;
+  }
+
+  .details {
+    margin-top: 2rem;
+  }
+
+  .cart {
+    width: 100%;
+  }
+
+  .confirmation {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    transform: translate(-0%, -0%);
+    min-width: 100%;
+    border-radius: 10px;
+  }
+
+  .confirmationPage {
+    height: 0vh;
+  }
+}
