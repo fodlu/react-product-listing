@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react-product-listing/static/css/main.6eef20eb.css",
+    "main.js": "/react-product-listing/static/js/main.c46841e2.js",
+    "static/media/RedHatText-Regular.ttf": "/react-product-listing/static/media/RedHatText-Regular.1114e0c17a9d15f2014a.ttf",
+    "static/media/RedHatText-SemiBold.ttf": "/react-product-listing/static/media/RedHatText-SemiBold.50846cf1a3346a806070.ttf",
+    "static/media/RedHatText-Bold.ttf": "/react-product-listing/static/media/RedHatText-Bold.710fa6829252d684327b.ttf",
+    "index.html": "/react-product-listing/index.html",
+    "main.6eef20eb.css.map": "/react-product-listing/static/css/main.6eef20eb.css.map",
+    "main.c46841e2.js.map": "/react-product-listing/static/js/main.c46841e2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6eef20eb.css",
+    "static/js/main.c46841e2.js"
+  ]
+}
